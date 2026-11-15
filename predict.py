@@ -16,8 +16,7 @@ from scipy.signal import butter, sosfiltfilt, resample_poly
 from torch import nn
 
 
-ROOT = Path("/content/drive/MyDrive/NeuroAlert_Detection")
-
+ROOT = Path(__file__).resolve().parent
 
 # ============================================================
 # MODEL ARCHITECTURE
@@ -186,11 +185,11 @@ class NeuroAlertPredictor:
         assert len(self.focal_reference) == 9951
 
         self.bce = self._load_model(
-            models / "cnn_bigru_v1/best_model.pt"
+            models / "cnn_bigru_bce_best.pt"
         )
 
         self.focal = self._load_model(
-            models / "cnn_bigru_focal_v1/best_model.pt"
+            models / "cnn_bigru_focal_best.pt"
         )
 
     def _load_model(self, path):
