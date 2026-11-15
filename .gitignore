@@ -1,0 +1,33 @@
+# Python temporary files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Raw EEG recordings
+*.edf
+*.bdf
+*.fif
+
+# Large processed EEG datasets
+windows/
+expanded_windows/
+expanded_windows_v2/
+*.npy
+*.h5
+*.hdf5
+
+# Temporary outputs
+outputs/
+output_run/
+*.log
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
